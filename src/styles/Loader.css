@@ -1,0 +1,40 @@
+.spinner{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }100%{
+        transform: rotate(360deg);
+    }
+}
+.loader{
+    display: inline-block;
+    width: 10vh;
+    height: 10vh;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 9999;
+}
+.loader2{
+    display: inline-block;
+    width: 8vh;
+    height: 12vh;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    animation: spin 1s ease infinite;
+}
+.loader3{
+    display: inline-block;
+    width: 12vh;
+    height: 8vh;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    animation: spin 1s ease infinite;
+}

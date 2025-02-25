@@ -1,0 +1,88 @@
+.main{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.leftmain{
+    display: inline-block;
+    width: 50%;
+    background-color: white;
+    height: 100%;
+}
+.rightmain{
+    background-color: darkgray;
+    width: 50%;
+    height: 100%;
+}
+.textmain{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin: auto auto;
+    align-self: center;
+    align-items: center;
+    font-size: 4vh;
+    font-weight: 700;
+}
+.main2{
+    padding: 4vh;
+    background-color: black;
+    color: aliceblue;
+}
+.main2 h1{
+    font-size: 4vh;
+}
+.main2 p{
+    background-color: black;
+    color: aliceblue;
+}
+.main2 button {
+    background-color: antiquewhite;
+    padding: 1.5vh;
+    color: black;
+    margin: 1.5vh;
+    cursor: pointer;
+    border-radius: 0.8vh;
+}
+.products{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: burlywood;
+}
+
+@media (max-width: 600px) {
+    .products{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: burlywood;
+    }   
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .products{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1025px) {
+    .products{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.underNav{
+    background-color: brown;
+    text-align: center;
+    font-size: 5vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

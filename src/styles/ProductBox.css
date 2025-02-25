@@ -1,0 +1,35 @@
+.productBox{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: grey;
+    padding: 2vh;
+    margin: 2vh auto;
+    border-radius: 2vh;
+    box-shadow: 2px 8px 8px black;
+}
+
+.productBox img{
+    height: 20vh;
+    border-radius: 2vh;
+}
+
+.productBox p{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 2vh;
+}
+.addToCart{
+    background-color: aquamarine;
+    padding: 1.5vh;
+    border-radius: 1vh;
+    margin: 1vh;
+    box-shadow: 2px 4px 4px black;
+    transition: 0.5s ease;
+}
+.addToCart:hover{
+    cursor: pointer;
+    box-shadow: none;
+}
+
