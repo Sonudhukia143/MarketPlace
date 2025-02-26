@@ -1,14 +1,11 @@
-import { useAuthContext } from "../context/AuthProvider";
+import { useState } from "react";
 import "../styles/ProductBox.css";
+import AddToCart from "./AddToCart.jsx";
 
 export default function ProductBox (product) {
-    const {dispatch} = useAuthContext();
+    const [cart,setCart] = useState(false);
 
-    const addToCart = async () => {
-        const response = await fetch(`https://fakestoreapi.com/products/${product.product.id}`);
-        const data = await response.json();
-        dispatch({type:'ADDTOCART', payload:{cartedProducts:data}});
-    }
+    const addToCart = (cart) => setCart(true);
 
     return (
         <>
@@ -31,6 +28,13 @@ export default function ProductBox (product) {
             </span>
             <button className="addToCart" onClick={addToCart}>Add To Cart</button>
         </div>
+        {
+            cart === false
+            ?
+            ""
+            :
+            <AddToCart product={product.product} setCart={setCart}  />
+        }
         </>
     )
 }

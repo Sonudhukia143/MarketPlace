@@ -1,0 +1,25 @@
+.cartBox{
+    position: absolute;
+    top: 50%;
+    right: 10%;
+}
+.increment{
+    background-color: white;
+    padding: 2vh;
+    border-radius: 0.5vh;
+    box-shadow: 2px 4px 5px black;
+}
+.decrement{
+    background-color: white;
+    padding: 2vh;
+    border-radius: 0.5vh;
+    box-shadow: 2px 4px 5px black;
+}
+.increment:hover{
+    box-shadow: none;
+    cursor: pointer;
+}
+.decrement:hover{
+    box-shadow: none;
+    cursor: pointer;
+}

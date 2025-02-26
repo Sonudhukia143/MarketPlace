@@ -9,7 +9,6 @@ export default function Navbar() {
     const [search, setSearch] = useState("");
     const {dispatch,state} = useAuthContext();
     const cartCount = state.cartedProducts;
-    console.log(cartCount);
 
     const searchProducts = async () => {
         if (!search.trim()) return;
@@ -96,8 +95,9 @@ export default function Navbar() {
                         </div>
 
                         {/* Cart Icon */}
-                        <div className="hidden sm:block">
+                        <NavLink to="/cart">
 
+                        <div className="hidden sm:block">
                             <svg
                                 className="w-8 h-8 text-white cursor-pointer"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -119,8 +119,8 @@ export default function Navbar() {
                             </span>
                          ) 
                         }
-
                         </div>
+                        </NavLink>
 
 
                     </div>

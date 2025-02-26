@@ -9,6 +9,7 @@ import Loader from './helperComponents/Loader.jsx';
 import { AuthProvider } from './context/AuthProvider.jsx';
 
 import Homepage from './routes/Homepage.jsx';
+import Store from './routes/Store.jsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -17,6 +18,11 @@ const router = createBrowserRouter(
         <Route index element={
           <Suspense fallback={<Loader />} >
             <Homepage />
+          </Suspense>
+        } />
+        <Route path="cart" element={
+          <Suspense fallback={<Loader />} >
+            <Store />
           </Suspense>
         } />
         <Route path="*" element={<UndefinedPath />} />
